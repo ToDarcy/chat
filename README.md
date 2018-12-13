@@ -39,8 +39,7 @@ https://todarcy.com/2018/11/26/01-48/
 
 4、nginx配置：
 
-server {
-
+	server {
         listen       80;
         server_name  xx.com;
         error_log logs/xx.log;
