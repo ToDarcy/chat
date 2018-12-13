@@ -40,10 +40,12 @@ https://todarcy.com/2018/11/26/01-48/
 4、nginx配置：
 
 server {
+
         listen       80;
         server_name  xx.com;
         error_log logs/xx.log;
         root   /html/xx/public;
+
         location / {
                 index index.php index.html index.htm;
                 try_files $uri $uri/ /index.php?$query_string;
@@ -53,10 +55,12 @@ server {
                         rewrite ^/(.*)$ /index.php/$1 last;#隐藏index.php文件
                 }
         }
+
         error_page   500 502 503 504  /50x.html;
         location = /50x.html {
             root   html;
         }
+
         location ~ ^(.+\.php)(.*)$ {
             fastcgi_pass   127.0.0.1:9000;
             fastcgi_index  index.php;
@@ -68,7 +72,6 @@ server {
             include        fastcgi_params;
         }
     }
-======================================================================
 
 
 
