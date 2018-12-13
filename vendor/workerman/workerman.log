@@ -1,0 +1,553 @@
+2018-12-05 12:07:56 pid:83642 Workerman[server.php] start in DEBUG mode
+2018-12-05 12:34:22 pid:83642 Workerman[server.php] stopping ...
+2018-12-05 12:34:22 pid:83642 Workerman[server.php] has been stopped
+2018-12-05 14:31:25 pid:85416 Workerman[server.php] start in DEBUG mode
+2018-12-05 14:31:40 pid:85421 Exception: no message in /workspace/chat_tp/application/gateway/controller/Events.php:75
+Stack trace:
+#0 [internal function]: app\gateway\controller\Events::onMessage('7f0000010b56000...', '{"type":"say","...')
+#1 /workspace/chat_tp/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('\\app\\gateway\\co...', '7f0000010b56000...', '{"type":"say","...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 /workspace/chat_tp/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #74)
+#5 /workspace/chat_tp/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#6 /workspace/chat_tp/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#7 /workspace/chat_tp/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#8 /workspace/chat_tp/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#9 /workspace/chat_tp/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#10 /workspace/chat_tp/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#11 /workspace/chat_tp/vendor/workerman/workerman/Worker.php(507): Workerman\Worker::forkWorkers()
+#12 /workspace/chat_tp/application/gateway/controller/Run.php(33): Workerman\Worker::runAll()
+#13 [internal function]: app\gateway\controller\Run->__construct()
+#14 /workspace/chat_tp/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#15 /workspace/chat_tp/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\gateway\\con...')
+#16 /workspace/chat_tp/thinkphp/library/think/App.php(575): think\Loader::controller('run', 'controller', false, 'Error')
+#17 /workspace/chat_tp/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#18 /workspace/chat_tp/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#19 /workspace/chat_tp/thinkphp/start.php(19): think\App::run()
+#20 /workspace/chat_tp/public/server.php(8): require('/workspace/chat...')
+#21 {main}
+2018-12-05 14:31:40 pid:85421 Worker[85421] process terminated
+2018-12-05 14:31:40 pid:85416 worker[RoomBusinessWorker:85421] exit with status 64000
+2018-12-05 14:31:55 pid:85428 Exception: no message in /workspace/chat_tp/application/gateway/controller/Events.php:75
+Stack trace:
+#0 [internal function]: app\gateway\controller\Events::onMessage('7f0000010b56000...', '{"type":"say","...')
+#1 /workspace/chat_tp/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('\\app\\gateway\\co...', '7f0000010b56000...', '{"type":"say","...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 /workspace/chat_tp/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #74)
+#5 /workspace/chat_tp/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#6 /workspace/chat_tp/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#7 /workspace/chat_tp/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#8 /workspace/chat_tp/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#9 /workspace/chat_tp/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#10 /workspace/chat_tp/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#11 /workspace/chat_tp/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#12 /workspace/chat_tp/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#13 /workspace/chat_tp/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#14 /workspace/chat_tp/application/gateway/controller/Run.php(33): Workerman\Worker::runAll()
+#15 [internal function]: app\gateway\controller\Run->__construct()
+#16 /workspace/chat_tp/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#17 /workspace/chat_tp/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\gateway\\con...')
+#18 /workspace/chat_tp/thinkphp/library/think/App.php(575): think\Loader::controller('run', 'controller', false, 'Error')
+#19 /workspace/chat_tp/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#20 /workspace/chat_tp/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#21 /workspace/chat_tp/thinkphp/start.php(19): think\App::run()
+#22 /workspace/chat_tp/public/server.php(8): require('/workspace/chat...')
+#23 {main}
+2018-12-05 14:31:55 pid:85428 Worker[85428] process terminated
+2018-12-05 14:31:55 pid:85416 worker[RoomBusinessWorker:85428] exit with status 64000
+2018-12-05 14:32:09 pid:85429 Exception: no message in /workspace/chat_tp/application/gateway/controller/Events.php:75
+Stack trace:
+#0 [internal function]: app\gateway\controller\Events::onMessage('7f0000010b56000...', '{"type":"say","...')
+#1 /workspace/chat_tp/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('\\app\\gateway\\co...', '7f0000010b56000...', '{"type":"say","...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 /workspace/chat_tp/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #75)
+#5 /workspace/chat_tp/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#6 /workspace/chat_tp/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#7 /workspace/chat_tp/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#8 /workspace/chat_tp/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#9 /workspace/chat_tp/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#10 /workspace/chat_tp/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#11 /workspace/chat_tp/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#12 /workspace/chat_tp/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#13 /workspace/chat_tp/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#14 /workspace/chat_tp/application/gateway/controller/Run.php(33): Workerman\Worker::runAll()
+#15 [internal function]: app\gateway\controller\Run->__construct()
+#16 /workspace/chat_tp/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#17 /workspace/chat_tp/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\gateway\\con...')
+#18 /workspace/chat_tp/thinkphp/library/think/App.php(575): think\Loader::controller('run', 'controller', false, 'Error')
+#19 /workspace/chat_tp/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#20 /workspace/chat_tp/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#21 /workspace/chat_tp/thinkphp/start.php(19): think\App::run()
+#22 /workspace/chat_tp/public/server.php(8): require('/workspace/chat...')
+#23 {main}
+2018-12-05 14:32:09 pid:85429 Worker[85429] process terminated
+2018-12-05 14:32:09 pid:85416 worker[RoomBusinessWorker:85429] exit with status 64000
+2018-12-05 14:32:11 pid:85430 Exception: no message in /workspace/chat_tp/application/gateway/controller/Events.php:75
+Stack trace:
+#0 [internal function]: app\gateway\controller\Events::onMessage('7f0000010b56000...', '{"type":"say","...')
+#1 /workspace/chat_tp/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('\\app\\gateway\\co...', '7f0000010b56000...', '{"type":"say","...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 /workspace/chat_tp/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #76)
+#5 /workspace/chat_tp/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#6 /workspace/chat_tp/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#7 /workspace/chat_tp/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#8 /workspace/chat_tp/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#9 /workspace/chat_tp/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#10 /workspace/chat_tp/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#11 /workspace/chat_tp/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#12 /workspace/chat_tp/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#13 /workspace/chat_tp/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#14 /workspace/chat_tp/application/gateway/controller/Run.php(33): Workerman\Worker::runAll()
+#15 [internal function]: app\gateway\controller\Run->__construct()
+#16 /workspace/chat_tp/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#17 /workspace/chat_tp/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\gateway\\con...')
+#18 /workspace/chat_tp/thinkphp/library/think/App.php(575): think\Loader::controller('run', 'controller', false, 'Error')
+#19 /workspace/chat_tp/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#20 /workspace/chat_tp/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#21 /workspace/chat_tp/thinkphp/start.php(19): think\App::run()
+#22 /workspace/chat_tp/public/server.php(8): require('/workspace/chat...')
+#23 {main}
+2018-12-05 14:32:11 pid:85430 Worker[85430] process terminated
+2018-12-05 14:32:11 pid:85416 worker[RoomBusinessWorker:85430] exit with status 64000
+2018-12-05 14:32:17 pid:85431 Exception: no message in /workspace/chat_tp/application/gateway/controller/Events.php:75
+Stack trace:
+#0 [internal function]: app\gateway\controller\Events::onMessage('7f0000010b56000...', '{"type":"say","...')
+#1 /workspace/chat_tp/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('\\app\\gateway\\co...', '7f0000010b56000...', '{"type":"say","...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 /workspace/chat_tp/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #77)
+#5 /workspace/chat_tp/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#6 /workspace/chat_tp/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#7 /workspace/chat_tp/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#8 /workspace/chat_tp/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#9 /workspace/chat_tp/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#10 /workspace/chat_tp/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#11 /workspace/chat_tp/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#12 /workspace/chat_tp/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#13 /workspace/chat_tp/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#14 /workspace/chat_tp/application/gateway/controller/Run.php(33): Workerman\Worker::runAll()
+#15 [internal function]: app\gateway\controller\Run->__construct()
+#16 /workspace/chat_tp/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#17 /workspace/chat_tp/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\gateway\\con...')
+#18 /workspace/chat_tp/thinkphp/library/think/App.php(575): think\Loader::controller('run', 'controller', false, 'Error')
+#19 /workspace/chat_tp/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#20 /workspace/chat_tp/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#21 /workspace/chat_tp/thinkphp/start.php(19): think\App::run()
+#22 /workspace/chat_tp/public/server.php(8): require('/workspace/chat...')
+#23 {main}
+2018-12-05 14:32:17 pid:85431 Worker[85431] process terminated
+2018-12-05 14:32:17 pid:85416 worker[RoomBusinessWorker:85431] exit with status 64000
+2018-12-05 14:33:13 pid:85419 Exception: no message in /workspace/chat_tp/application/gateway/controller/Events.php:75
+Stack trace:
+#0 [internal function]: app\gateway\controller\Events::onMessage('7f0000010b56000...', '{"type":"say","...')
+#1 /workspace/chat_tp/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('\\app\\gateway\\co...', '7f0000010b56000...', '{"type":"say","...')
+#2 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 /workspace/chat_tp/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #74)
+#5 /workspace/chat_tp/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#6 /workspace/chat_tp/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#7 /workspace/chat_tp/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#8 /workspace/chat_tp/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#9 /workspace/chat_tp/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#10 /workspace/chat_tp/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#11 /workspace/chat_tp/vendor/workerman/workerman/Worker.php(507): Workerman\Worker::forkWorkers()
+#12 /workspace/chat_tp/application/gateway/controller/Run.php(33): Workerman\Worker::runAll()
+#13 [internal function]: app\gateway\controller\Run->__construct()
+#14 /workspace/chat_tp/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#15 /workspace/chat_tp/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\gateway\\con...')
+#16 /workspace/chat_tp/thinkphp/library/think/App.php(575): think\Loader::controller('run', 'controller', false, 'Error')
+#17 /workspace/chat_tp/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#18 /workspace/chat_tp/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#19 /workspace/chat_tp/thinkphp/start.php(19): think\App::run()
+#20 /workspace/chat_tp/public/server.php(8): require('/workspace/chat...')
+#21 {main}
+2018-12-05 14:33:13 pid:85419 Worker[85419] process terminated
+2018-12-05 14:33:13 pid:85416 worker[RoomBusinessWorker:85419] exit with status 64000
+2018-12-05 14:36:45 pid:85416 Workerman[server.php] stopping ...
+2018-12-05 14:36:45 pid:85416 Workerman[server.php] has been stopped
+2018-12-10 12:23:06 pid:93061 Workerman[server.php] start in DEBUG mode
+2018-12-10 14:12:13 pid:93061 Workerman[server.php] stopping ...
+2018-12-10 14:12:13 pid:93061 Workerman[server.php] has been stopped
+2018-12-10 15:24:05 pid:99692 Workerman[server.php] start in DEBUG mode
+2018-12-10 15:29:38 pid:99692 Workerman[server.php] stopping ...
+2018-12-10 15:29:38 pid:99692 Workerman[server.php] has been stopped
+2018-12-10 15:29:44 pid:99928 Workerman[server.php] start in DEBUG mode
+2018-12-10 15:30:30 pid:99928 Workerman[server.php] stopping ...
+2018-12-10 15:30:30 pid:99928 Workerman[server.php] has been stopped
+2018-12-10 15:32:37 pid:545 Workerman[server.php] start in DEBUG mode
+2018-12-10 15:35:57 pid:545 Workerman[server.php] stopping ...
+2018-12-10 15:35:57 pid:545 Workerman[server.php] has been stopped
+2018-12-10 15:35:59 pid:882 Workerman[server.php] start in DEBUG mode
+2018-12-10 15:37:30 pid:882 Workerman[server.php] stopping ...
+2018-12-10 15:37:30 pid:882 Workerman[server.php] has been stopped
+2018-12-10 15:54:22 pid:1745 Workerman[server.php] start in DEBUG mode
+2018-12-10 15:54:33 pid:1745 Workerman[server.php] stopping ...
+2018-12-10 15:54:33 pid:1745 Workerman[server.php] has been stopped
+2018-12-10 15:54:44 pid:1854 Workerman[server.php] start in DEBUG mode
+2018-12-10 15:57:29 pid:1854 Workerman[server.php] stopping ...
+2018-12-10 15:57:29 pid:1854 Workerman[server.php] has been stopped
+2018-12-10 15:57:31 pid:2271 Workerman[server.php] start in DEBUG mode
+2018-12-10 15:58:47 pid:2275 think\exception\ErrorException: Undefined index: message_data in /workspace/chat_tp50/application/chat/controller/EventsController.php:85
+Stack trace:
+#0 /workspace/chat_tp50/application/chat/controller/EventsController.php(85): think\Error::appError(8, 'Undefined index...', '/workspace/chat...', 85, Array)
+#1 [internal function]: app\chat\controller\EventsController::onMessage('7f0000010b57000...', '{"type":"say","...')
+#2 /workspace/chat_tp50/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('\\app\\chat\\contr...', '7f0000010b57000...', '{"type":"say","...')
+#3 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 /workspace/chat_tp50/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #74)
+#6 /workspace/chat_tp50/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#7 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#8 /workspace/chat_tp50/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#9 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#10 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#11 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#12 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(507): Workerman\Worker::forkWorkers()
+#13 /workspace/chat_tp50/application/chat/controller/RunController.php(33): Workerman\Worker::runAll()
+#14 [internal function]: app\chat\controller\RunController->__construct()
+#15 /workspace/chat_tp50/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#16 /workspace/chat_tp50/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\chat\\contro...')
+#17 /workspace/chat_tp50/thinkphp/library/think/App.php(575): think\Loader::controller('run', 'controller', true, 'Error')
+#18 /workspace/chat_tp50/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#19 /workspace/chat_tp50/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#20 /workspace/chat_tp50/thinkphp/start.php(19): think\App::run()
+#21 /workspace/chat_tp50/public/server.php(8): require('/workspace/chat...')
+#22 {main}
+2018-12-10 15:58:47 pid:2275 Worker[2275] process terminated
+2018-12-10 15:58:47 pid:2271 worker[RoomBusinessWorker:2275] exit with status 64000
+2018-12-10 15:58:54 pid:2301 think\exception\ErrorException: Undefined index: message_data in /workspace/chat_tp50/application/chat/controller/EventsController.php:85
+Stack trace:
+#0 /workspace/chat_tp50/application/chat/controller/EventsController.php(85): think\Error::appError(8, 'Undefined index...', '/workspace/chat...', 85, Array)
+#1 [internal function]: app\chat\controller\EventsController::onMessage('7f0000010b57000...', '{"type":"say","...')
+#2 /workspace/chat_tp50/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('\\app\\chat\\contr...', '7f0000010b57000...', '{"type":"say","...')
+#3 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 /workspace/chat_tp50/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #72)
+#6 /workspace/chat_tp50/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#7 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#8 /workspace/chat_tp50/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#9 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#10 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#11 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#12 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#13 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#14 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#15 /workspace/chat_tp50/application/chat/controller/RunController.php(33): Workerman\Worker::runAll()
+#16 [internal function]: app\chat\controller\RunController->__construct()
+#17 /workspace/chat_tp50/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#18 /workspace/chat_tp50/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\chat\\contro...')
+#19 /workspace/chat_tp50/thinkphp/library/think/App.php(575): think\Loader::controller('run', 'controller', true, 'Error')
+#20 /workspace/chat_tp50/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#21 /workspace/chat_tp50/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#22 /workspace/chat_tp50/thinkphp/start.php(19): think\App::run()
+#23 /workspace/chat_tp50/public/server.php(8): require('/workspace/chat...')
+#24 {main}
+2018-12-10 15:58:54 pid:2301 Worker[2301] process terminated
+2018-12-10 15:58:54 pid:2271 worker[RoomBusinessWorker:2301] exit with status 64000
+2018-12-10 15:58:59 pid:2302 think\exception\ErrorException: Undefined index: message_data in /workspace/chat_tp50/application/chat/controller/EventsController.php:85
+Stack trace:
+#0 /workspace/chat_tp50/application/chat/controller/EventsController.php(85): think\Error::appError(8, 'Undefined index...', '/workspace/chat...', 85, Array)
+#1 [internal function]: app\chat\controller\EventsController::onMessage('7f0000010b57000...', '{"type":"say","...')
+#2 /workspace/chat_tp50/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('\\app\\chat\\contr...', '7f0000010b57000...', '{"type":"say","...')
+#3 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 /workspace/chat_tp50/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #73)
+#6 /workspace/chat_tp50/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#7 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#8 /workspace/chat_tp50/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#9 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#10 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#11 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#12 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#13 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#14 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#15 /workspace/chat_tp50/application/chat/controller/RunController.php(33): Workerman\Worker::runAll()
+#16 [internal function]: app\chat\controller\RunController->__construct()
+#17 /workspace/chat_tp50/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#18 /workspace/chat_tp50/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\chat\\contro...')
+#19 /workspace/chat_tp50/thinkphp/library/think/App.php(575): think\Loader::controller('run', 'controller', true, 'Error')
+#20 /workspace/chat_tp50/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#21 /workspace/chat_tp50/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#22 /workspace/chat_tp50/thinkphp/start.php(19): think\App::run()
+#23 /workspace/chat_tp50/public/server.php(8): require('/workspace/chat...')
+#24 {main}
+2018-12-10 15:58:59 pid:2302 Worker[2302] process terminated
+2018-12-10 15:58:59 pid:2271 worker[RoomBusinessWorker:2302] exit with status 64000
+2018-12-10 15:59:05 pid:2303 think\exception\ErrorException: Undefined index: message_data in /workspace/chat_tp50/application/chat/controller/EventsController.php:85
+Stack trace:
+#0 /workspace/chat_tp50/application/chat/controller/EventsController.php(85): think\Error::appError(8, 'Undefined index...', '/workspace/chat...', 85, Array)
+#1 [internal function]: app\chat\controller\EventsController::onMessage('7f0000010b57000...', '{"type":"say","...')
+#2 /workspace/chat_tp50/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('\\app\\chat\\contr...', '7f0000010b57000...', '{"type":"say","...')
+#3 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 /workspace/chat_tp50/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #74)
+#6 /workspace/chat_tp50/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#7 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#8 /workspace/chat_tp50/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#9 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#10 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#11 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#12 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#13 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#14 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#15 /workspace/chat_tp50/application/chat/controller/RunController.php(33): Workerman\Worker::runAll()
+#16 [internal function]: app\chat\controller\RunController->__construct()
+#17 /workspace/chat_tp50/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#18 /workspace/chat_tp50/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\chat\\contro...')
+#19 /workspace/chat_tp50/thinkphp/library/think/App.php(575): think\Loader::controller('run', 'controller', true, 'Error')
+#20 /workspace/chat_tp50/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#21 /workspace/chat_tp50/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#22 /workspace/chat_tp50/thinkphp/start.php(19): think\App::run()
+#23 /workspace/chat_tp50/public/server.php(8): require('/workspace/chat...')
+#24 {main}
+2018-12-10 15:59:05 pid:2303 Worker[2303] process terminated
+2018-12-10 15:59:05 pid:2271 worker[RoomBusinessWorker:2303] exit with status 64000
+2018-12-10 15:59:19 pid:2304 think\exception\ErrorException: Undefined index: message_data in /workspace/chat_tp50/application/chat/controller/EventsController.php:85
+Stack trace:
+#0 /workspace/chat_tp50/application/chat/controller/EventsController.php(85): think\Error::appError(8, 'Undefined index...', '/workspace/chat...', 85, Array)
+#1 [internal function]: app\chat\controller\EventsController::onMessage('7f0000010b57000...', '{"type":"say","...')
+#2 /workspace/chat_tp50/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('\\app\\chat\\contr...', '7f0000010b57000...', '{"type":"say","...')
+#3 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 /workspace/chat_tp50/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #75)
+#6 /workspace/chat_tp50/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#7 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#8 /workspace/chat_tp50/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#9 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#10 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#11 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#12 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#13 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#14 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#15 /workspace/chat_tp50/application/chat/controller/RunController.php(33): Workerman\Worker::runAll()
+#16 [internal function]: app\chat\controller\RunController->__construct()
+#17 /workspace/chat_tp50/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#18 /workspace/chat_tp50/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\chat\\contro...')
+#19 /workspace/chat_tp50/thinkphp/library/think/App.php(575): think\Loader::controller('run', 'controller', true, 'Error')
+#20 /workspace/chat_tp50/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#21 /workspace/chat_tp50/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#22 /workspace/chat_tp50/thinkphp/start.php(19): think\App::run()
+#23 /workspace/chat_tp50/public/server.php(8): require('/workspace/chat...')
+#24 {main}
+2018-12-10 15:59:19 pid:2304 Worker[2304] process terminated
+2018-12-10 15:59:19 pid:2271 worker[RoomBusinessWorker:2304] exit with status 64000
+2018-12-10 15:59:29 pid:2305 think\exception\ErrorException: Undefined index: message_data in /workspace/chat_tp50/application/chat/controller/EventsController.php:85
+Stack trace:
+#0 /workspace/chat_tp50/application/chat/controller/EventsController.php(85): think\Error::appError(8, 'Undefined index...', '/workspace/chat...', 85, Array)
+#1 [internal function]: app\chat\controller\EventsController::onMessage('7f0000010b57000...', '{"type":"say","...')
+#2 /workspace/chat_tp50/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('\\app\\chat\\contr...', '7f0000010b57000...', '{"type":"say","...')
+#3 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 /workspace/chat_tp50/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #76)
+#6 /workspace/chat_tp50/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#7 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#8 /workspace/chat_tp50/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#9 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#10 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#11 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#12 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#13 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#14 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#15 /workspace/chat_tp50/application/chat/controller/RunController.php(33): Workerman\Worker::runAll()
+#16 [internal function]: app\chat\controller\RunController->__construct()
+#17 /workspace/chat_tp50/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#18 /workspace/chat_tp50/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\chat\\contro...')
+#19 /workspace/chat_tp50/thinkphp/library/think/App.php(575): think\Loader::controller('run', 'controller', true, 'Error')
+#20 /workspace/chat_tp50/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#21 /workspace/chat_tp50/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#22 /workspace/chat_tp50/thinkphp/start.php(19): think\App::run()
+#23 /workspace/chat_tp50/public/server.php(8): require('/workspace/chat...')
+#24 {main}
+2018-12-10 15:59:29 pid:2305 Worker[2305] process terminated
+2018-12-10 15:59:29 pid:2271 worker[RoomBusinessWorker:2305] exit with status 64000
+2018-12-10 15:59:43 pid:2306 think\exception\ErrorException: Undefined index: message_data in /workspace/chat_tp50/application/chat/controller/EventsController.php:85
+Stack trace:
+#0 /workspace/chat_tp50/application/chat/controller/EventsController.php(85): think\Error::appError(8, 'Undefined index...', '/workspace/chat...', 85, Array)
+#1 [internal function]: app\chat\controller\EventsController::onMessage('7f0000010b57000...', '{"type":"say","...')
+#2 /workspace/chat_tp50/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('\\app\\chat\\contr...', '7f0000010b57000...', '{"type":"say","...')
+#3 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 /workspace/chat_tp50/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #77)
+#6 /workspace/chat_tp50/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#7 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#8 /workspace/chat_tp50/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#9 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#10 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#11 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#12 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#13 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#14 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#15 /workspace/chat_tp50/application/chat/controller/RunController.php(33): Workerman\Worker::runAll()
+#16 [internal function]: app\chat\controller\RunController->__construct()
+#17 /workspace/chat_tp50/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#18 /workspace/chat_tp50/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\chat\\contro...')
+#19 /workspace/chat_tp50/thinkphp/library/think/App.php(575): think\Loader::controller('run', 'controller', true, 'Error')
+#20 /workspace/chat_tp50/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#21 /workspace/chat_tp50/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#22 /workspace/chat_tp50/thinkphp/start.php(19): think\App::run()
+#23 /workspace/chat_tp50/public/server.php(8): require('/workspace/chat...')
+#24 {main}
+2018-12-10 15:59:43 pid:2306 Worker[2306] process terminated
+2018-12-10 15:59:43 pid:2271 worker[RoomBusinessWorker:2306] exit with status 64000
+2018-12-10 16:00:16 pid:2307 think\exception\ErrorException: Undefined index: message_data in /workspace/chat_tp50/application/chat/controller/EventsController.php:85
+Stack trace:
+#0 /workspace/chat_tp50/application/chat/controller/EventsController.php(85): think\Error::appError(8, 'Undefined index...', '/workspace/chat...', 85, Array)
+#1 [internal function]: app\chat\controller\EventsController::onMessage('7f0000010b54000...', '{"type":"say","...')
+#2 /workspace/chat_tp50/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('\\app\\chat\\contr...', '7f0000010b54000...', '{"type":"say","...')
+#3 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 /workspace/chat_tp50/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #75)
+#6 /workspace/chat_tp50/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#7 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#8 /workspace/chat_tp50/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#9 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#10 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#11 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#12 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#13 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#14 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#15 /workspace/chat_tp50/application/chat/controller/RunController.php(33): Workerman\Worker::runAll()
+#16 [internal function]: app\chat\controller\RunController->__construct()
+#17 /workspace/chat_tp50/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#18 /workspace/chat_tp50/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\chat\\contro...')
+#19 /workspace/chat_tp50/thinkphp/library/think/App.php(575): think\Loader::controller('run', 'controller', true, 'Error')
+#20 /workspace/chat_tp50/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#21 /workspace/chat_tp50/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#22 /workspace/chat_tp50/thinkphp/start.php(19): think\App::run()
+#23 /workspace/chat_tp50/public/server.php(8): require('/workspace/chat...')
+#24 {main}
+2018-12-10 16:00:16 pid:2307 Worker[2307] process terminated
+2018-12-10 16:00:16 pid:2271 worker[RoomBusinessWorker:2307] exit with status 64000
+2018-12-10 16:00:37 pid:2309 think\exception\ErrorException: Undefined index: message_data in /workspace/chat_tp50/application/chat/controller/EventsController.php:85
+Stack trace:
+#0 /workspace/chat_tp50/application/chat/controller/EventsController.php(85): think\Error::appError(8, 'Undefined index...', '/workspace/chat...', 85, Array)
+#1 [internal function]: app\chat\controller\EventsController::onMessage('7f0000010b54000...', '{"type":"say","...')
+#2 /workspace/chat_tp50/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('\\app\\chat\\contr...', '7f0000010b54000...', '{"type":"say","...')
+#3 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 /workspace/chat_tp50/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #76)
+#6 /workspace/chat_tp50/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#7 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#8 /workspace/chat_tp50/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#9 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#10 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#11 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#12 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#13 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#14 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#15 /workspace/chat_tp50/application/chat/controller/RunController.php(33): Workerman\Worker::runAll()
+#16 [internal function]: app\chat\controller\RunController->__construct()
+#17 /workspace/chat_tp50/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#18 /workspace/chat_tp50/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\chat\\contro...')
+#19 /workspace/chat_tp50/thinkphp/library/think/App.php(575): think\Loader::controller('run', 'controller', true, 'Error')
+#20 /workspace/chat_tp50/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#21 /workspace/chat_tp50/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#22 /workspace/chat_tp50/thinkphp/start.php(19): think\App::run()
+#23 /workspace/chat_tp50/public/server.php(8): require('/workspace/chat...')
+#24 {main}
+2018-12-10 16:00:37 pid:2309 Worker[2309] process terminated
+2018-12-10 16:00:37 pid:2271 worker[RoomBusinessWorker:2309] exit with status 64000
+2018-12-10 16:01:09 pid:2311 think\exception\ErrorException: Undefined index: message_data in /workspace/chat_tp50/application/chat/controller/EventsController.php:85
+Stack trace:
+#0 /workspace/chat_tp50/application/chat/controller/EventsController.php(85): think\Error::appError(8, 'Undefined index...', '/workspace/chat...', 85, Array)
+#1 [internal function]: app\chat\controller\EventsController::onMessage('7f0000010b54000...', '{"type":"say","...')
+#2 /workspace/chat_tp50/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('\\app\\chat\\contr...', '7f0000010b54000...', '{"type":"say","...')
+#3 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 /workspace/chat_tp50/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #77)
+#6 /workspace/chat_tp50/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#7 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#8 /workspace/chat_tp50/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#9 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#10 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#11 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#12 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#13 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#14 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#15 /workspace/chat_tp50/application/chat/controller/RunController.php(33): Workerman\Worker::runAll()
+#16 [internal function]: app\chat\controller\RunController->__construct()
+#17 /workspace/chat_tp50/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#18 /workspace/chat_tp50/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\chat\\contro...')
+#19 /workspace/chat_tp50/thinkphp/library/think/App.php(575): think\Loader::controller('run', 'controller', true, 'Error')
+#20 /workspace/chat_tp50/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#21 /workspace/chat_tp50/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#22 /workspace/chat_tp50/thinkphp/start.php(19): think\App::run()
+#23 /workspace/chat_tp50/public/server.php(8): require('/workspace/chat...')
+#24 {main}
+2018-12-10 16:01:09 pid:2311 Worker[2311] process terminated
+2018-12-10 16:01:09 pid:2271 worker[RoomBusinessWorker:2311] exit with status 64000
+2018-12-10 16:03:15 pid:2313 think\exception\ErrorException: Undefined index: message_data in /workspace/chat_tp50/application/chat/controller/EventsController.php:85
+Stack trace:
+#0 /workspace/chat_tp50/application/chat/controller/EventsController.php(85): think\Error::appError(8, 'Undefined index...', '/workspace/chat...', 85, Array)
+#1 [internal function]: app\chat\controller\EventsController::onMessage('7f0000010b54000...', '{"type":"say","...')
+#2 /workspace/chat_tp50/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('\\app\\chat\\contr...', '7f0000010b54000...', '{"type":"say","...')
+#3 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 /workspace/chat_tp50/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #78)
+#6 /workspace/chat_tp50/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#7 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#8 /workspace/chat_tp50/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#9 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#10 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#11 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#12 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1586): Workerman\Worker::forkWorkers()
+#13 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1535): Workerman\Worker::monitorWorkersForLinux()
+#14 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::monitorWorkers()
+#15 /workspace/chat_tp50/application/chat/controller/RunController.php(33): Workerman\Worker::runAll()
+#16 [internal function]: app\chat\controller\RunController->__construct()
+#17 /workspace/chat_tp50/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#18 /workspace/chat_tp50/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\chat\\contro...')
+#19 /workspace/chat_tp50/thinkphp/library/think/App.php(575): think\Loader::controller('run', 'controller', true, 'Error')
+#20 /workspace/chat_tp50/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#21 /workspace/chat_tp50/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#22 /workspace/chat_tp50/thinkphp/start.php(19): think\App::run()
+#23 /workspace/chat_tp50/public/server.php(8): require('/workspace/chat...')
+#24 {main}
+2018-12-10 16:03:15 pid:2313 Worker[2313] process terminated
+2018-12-10 16:03:15 pid:2271 worker[RoomBusinessWorker:2313] exit with status 64000
+2018-12-10 16:06:56 pid:2278 think\exception\ErrorException: Undefined index: message_data in /workspace/chat_tp50/application/chat/controller/EventsController.php:85
+Stack trace:
+#0 /workspace/chat_tp50/application/chat/controller/EventsController.php(85): think\Error::appError(8, 'Undefined index...', '/workspace/chat...', 85, Array)
+#1 [internal function]: app\chat\controller\EventsController::onMessage('7f0000010b54000...', '{"type":"say","...')
+#2 /workspace/chat_tp50/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('\\app\\chat\\contr...', '7f0000010b54000...', '{"type":"say","...')
+#3 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#4 /workspace/chat_tp50/vendor/workerman/workerman/Connection/TcpConnection.php(658): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #68)
+#6 /workspace/chat_tp50/vendor/workerman/workerman/Events/Select.php(294): call_user_func_array(Array, Array)
+#7 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(2321): Workerman\Events\Select->loop()
+#8 /workspace/chat_tp50/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#9 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1452): GatewayWorker\BusinessWorker->run()
+#10 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1282): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#11 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(1256): Workerman\Worker::forkWorkersForLinux()
+#12 /workspace/chat_tp50/vendor/workerman/workerman/Worker.php(507): Workerman\Worker::forkWorkers()
+#13 /workspace/chat_tp50/application/chat/controller/RunController.php(33): Workerman\Worker::runAll()
+#14 [internal function]: app\chat\controller\RunController->__construct()
+#15 /workspace/chat_tp50/thinkphp/library/think/App.php(359): ReflectionClass->newInstanceArgs(Array)
+#16 /workspace/chat_tp50/thinkphp/library/think/Loader.php(479): think\App::invokeClass('app\\chat\\contro...')
+#17 /workspace/chat_tp50/thinkphp/library/think/App.php(575): think\Loader::controller('run', 'controller', true, 'Error')
+#18 /workspace/chat_tp50/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#19 /workspace/chat_tp50/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#20 /workspace/chat_tp50/thinkphp/start.php(19): think\App::run()
+#21 /workspace/chat_tp50/public/server.php(8): require('/workspace/chat...')
+#22 {main}
+2018-12-10 16:06:56 pid:2278 Worker[2278] process terminated
+2018-12-10 16:06:56 pid:2271 worker[RoomBusinessWorker:2278] exit with status 64000
+2018-12-10 16:08:17 pid:2271 Workerman[server.php] stopping ...
+2018-12-10 16:08:17 pid:2271 Workerman[server.php] has been stopped
+2018-12-12 11:58:25 pid:25379 Workerman[server01.php] start in DEBUG mode
+2018-12-12 11:58:53 pid:25379 Workerman[server01.php] stopping ...
+2018-12-12 11:58:53 pid:25379 Workerman[server01.php] has been stopped
+2018-12-12 11:58:54 pid:25492 Workerman[server01.php] start in DEBUG mode
+2018-12-12 12:14:46 pid:25492 Workerman[server01.php] stopping ...
+2018-12-12 12:14:46 pid:25492 Workerman[server01.php] has been stopped
+2018-12-12 14:50:05 pid:26226 Workerman[server01.php] start in DEBUG mode
+2018-12-12 15:50:29 pid:26226 Workerman[server01.php] stopping ...
+2018-12-12 15:50:29 pid:26226 Workerman[server01.php] has been stopped
+2018-12-12 15:52:25 pid:26744 Workerman[server01.php] start in DEBUG mode
+2018-12-12 16:02:14 pid:26744 Workerman[server01.php] stopping ...
+2018-12-12 16:02:14 pid:26744 Workerman[server01.php] has been stopped
+2018-12-12 17:24:44 pid:29221 Workerman[server01.php] start in DEBUG mode
+2018-12-12 17:48:15 pid:29221 Workerman[server01.php] stopping ...
+2018-12-12 17:48:15 pid:29221 Workerman[server01.php] has been stopped

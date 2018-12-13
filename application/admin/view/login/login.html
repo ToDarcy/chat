@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>后台管理</title>
+
+<link rel="stylesheet" type="text/css" href="{:config('public.static')}/login/userpanel.css">
+<link rel="stylesheet" type="text/css" href="{:config('public.static')}/bootstrap/css/bootstrap.min.css">
+<link href="{:config('public.static')}/login/style_log.css" rel="stylesheet" type="text/css">
+<!-- <link rel="stylesheet" type="text/css" href="{:config('public.static')}/login/jquery.ui.all.css"> -->
+<style type="text/css">
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color: #c9c9ca; opacity:1; 
+    }
+
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color: #c9c9ca;opacity:1;
+    }
+
+    input:-ms-input-placeholder{
+        color: #c9c9ca;opacity:1;
+    }
+
+    input::-webkit-input-placeholder{
+        color: #c9c9ca;opacity:1;
+    }
+</style>
+</head>
+<body class="login" mycollectionplug="bind">
+<div class="login_m">
+<div class="login_logo"><img src="{:config('public.static')}/login/logo_3.png" width="196" height="46"></div>
+<form action="" method="post" name="myform" accept-charset="utf-8">
+  <div class="login_boder">
+      <div class="login_padding" id="login_model">
+        <h2>账号</h2>
+        <label>
+          <input type="text" id="username" name="username" class="txt_input txt_input2" placeholder="Please enter the user account">
+        </label>
+        <h2>密码</h2>
+        <label>
+          <input type="password" name="password" id="userpwd" class="txt_input" placeholder="Please enter the user password">
+        </label>
+        <!-- <p id="wait" class="show">正在加载验证码......</p> -->
+        <!-- <p class="forgot"><a id="iforget" href="javascript:void(0);">忘记密码?</a></p> -->
+        <div class="rem_sub">
+        <div class="rem_sub_l">
+        <!-- <input type="checkbox" name="checkbox" id="save_me"> -->
+         <!-- <label for="checkbox">Remember me</label> -->
+         </div>
+         <h2></h2>
+          <label>
+            <input name="dosubmit" onclick="myform.submit()" class="btn btn-inverse btn-block" value="登录">
+          </label>
+        </div>
+      </div>
+  <div id="forget_model" class="login_padding" style="display:none">
+  <br>
+     <h1>Forgot password</h1>
+     <br>
+     <div class="forget_model_h2">(Please enter your registered email below and the system will automatically reset users’ password and send it to user’s registered email address.)</div>
+      <label>
+      <input type="text" id="usrmail" class="txt_input txt_input2">
+     </label>
+    <div class="rem_sub">
+    <div class="rem_sub_l">
+     </div>
+    </div>
+  </div>
+  <!--login_padding  Sign up end-->
+  </div><!--login_boder end-->
+</form>
+</div><!--login_m end-->
+ <br>
+<!-- <p align="center"> <a href="http://hckj.todarcy.com/" target="_blank" title="黑虫">【黑虫】http://hckj.todarcy.com/</a></p> -->
+<script src="{:config('public.static')}/ace1.4/assets/js/jquery-2.1.4.min.js"></script>
+<script src="{:config('public.static')}/login/gt.js"></script>
+<script src="{:config('public.static')}/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

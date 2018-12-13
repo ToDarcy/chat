@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>客服</title>
+        <!-- Bootstrap 核心 CSS 文件 -->
+        <link href="/static/index/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            /*web background*/
+            .container{
+                display:table;
+                height:100%;
+            }
+
+            .row{
+                display: table-cell;
+                vertical-align: middle;
+            }
+            /* centered columns styles */
+            .row-centered {
+                text-align:center;
+            }
+            .col-centered {
+                display:inline-block;
+                float:none;
+                text-align:left;
+                margin-right:-4px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row row-centered">
+                <div class="well col-md-6 col-centered">
+                    <h3>客服列表</h3>
+                    <form:form action="/login" method="post" role="form">
+                        <ul class="list-group">
+                          {if condition="!empty($info) neq false"}
+                            {volist name="info" id="vo"}
+                                <li class="list-group-item" val="{$vo.id}" client_id="{$vo.client_id}" is_online="{$vo.is_online}" onclick="Chat(this)">{$vo.name} {if condition="$vo.is_online == 1"} <span style="color: #5ebb01;float:right">(在线)</span> {else /} <span style="color: red;float:right">(不在线)</span> {/if}</li>
+                            {/volist}
+                          {/if}
+                        </ul>
+                    </form:form>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="/static/index/js/jquery.min.js"></script>
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+          function Chat(obj)
+          {
+            var id = $(obj).attr("val");
+            var is_online = $(obj).attr("is_online");
+            var client_id = $(obj).attr("client_id");
+            if(is_online == 0) {
+              return false;
+            }
+            window.location.href = '/admin/chats/chat?client_id='+client_id;
+          }
+        </script>
+    </body>
+</html>
