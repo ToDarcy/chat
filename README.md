@@ -30,7 +30,7 @@ sudo php server.php start
 
 
 3、安装swoole扩展：
-https://todarcy.com/2018/11/26/01-48/
+https://www.cnblogs.com/todarcy/articles/10984757.html
 ======================================================================
 
 
